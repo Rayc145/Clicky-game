@@ -58,15 +58,15 @@ while running:
                 if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Easy":
                     play = True
                     xoffset = 0
-                if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Medium":
+                if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Medium" and medium:
                     play = True
                     xoffset = 2
                     last_played = "medium"
-                if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Hard":
+                if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Hard" and hard:
                     play = True
                     xoffset = 5
                     last_played = "hard"
-                if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Insane":
+                if 250 <= positionx <= 390 and 190 <= positiony <= 250 and difficulty == "Insane" and insane:
                     play = True
                     xoffset = 10
                     last_played = "insane"
@@ -176,6 +176,7 @@ while running:
     else:
         if nextiter == False:
             score = 0
+            total_clicks = 0
             nextiter = True
         seconds += 1/60
         screen.fill((255, 255, 255))
